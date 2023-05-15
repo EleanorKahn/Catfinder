@@ -9,21 +9,25 @@ const SearchComponent = () => {
     const [goodWith, setGoodWith] = useState("");
     const [color, setColor] = useState("");
 
-    function handleSubmit(event) {
-        event.preventDefault();
+    function handleSubmit(e) {
+        e.preventDefault();
         console.log(zipcode);
+        console.log(color);
+        console.log(age);
+        console.log(goodWith);
     };
 
     return (
         <div>
-        {!submit
-        ? <form onSubmit={handleSubmit}>
+        
+        <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor='age'>Age </label>
                 <select 
                     id="age"
                     name="age"
                     value={age}
+                    onChange={(e) => setAge(e.target.value)}
                 >
                     <option>Any</option>
                     <option>Kitten</option>
@@ -36,17 +40,31 @@ const SearchComponent = () => {
                     id="goodWith"
                     name="goodWith"
                     value={goodWith}
+                    onChange={(e) => setGoodWith(e.target.value)}
                 >
                     <option>I want to be a solo pet</option>
                     <option>other cats</option>
                     <option>other dogs</option>
                     <option>kids</option>
                 </select>
+                <label htmlFor="color">Color </label>
+                <select
+                    id="color"
+                    name="color"
+                    value={color}
+                    onChange={(e) => setColor(e.target.value)}
+                >
+                    <option>Black</option>
+                    <option>Tuxedo</option>
+                    <option>White</option>
+                    <option>Tortoishell</option>
+                </select>
                 <label htmlFor='furLength'>Fur length </label>
                 <select
                     id="furLenght"
                     name="furLength"
                     value={furLength}
+                    onChange={(e) => setFurLength(e.target.value)}
                 >
                     <option>Any</option>
                     <option>Hairless</option>
@@ -67,9 +85,9 @@ const SearchComponent = () => {
             <button type="submit" onClick={() => setSubmit(true)}>Search</button>
         </form>
 
-        : <ResultComponent />
+        <ResultComponent />
 
-        }
+        
         </div>
     );
 };
