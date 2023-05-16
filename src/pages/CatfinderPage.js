@@ -4,7 +4,7 @@ const CatfinderPage = () => {
 
     return (
         <div>
-            <h2>Catfinder Page</h2>
+            <h2 className="text-center">Catfinder Page</h2>
             <div>
                 <SearchComponent />
             </div>
