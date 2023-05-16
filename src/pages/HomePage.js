@@ -3,7 +3,7 @@ import React from 'react';
 const HomePage = () => {
   return (
     <div>
-        <h2 className="mb-4 text-center text-white">Adopt, Don&apos;t Shop</h2>
+        <h2 className="mb-4 text-center text-white font-fraunces">Adopt, Don&apos;t Shop</h2>
         <section className="grid sm:grid-cols-2 grid-cols-1 mb-4">
             <article className="p-4">
                 <h3 className='mb-2'>Transform your brand</h3>

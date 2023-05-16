@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const FooterComponent = () => {
   return (
     <div className="bg-mutedCyan text-darkDesaturatedCyan">
-        <h3 className='text-center'>Catfinder</h3>
+        <h3 className='text-center font-bold'>Catfinder</h3>
         <ul className='flex flex-wrap self-center justify-evenly'>
             <li className=''>
                 <NavLink to="/">Home</NavLink>

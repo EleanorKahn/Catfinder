@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderComponent = () => {
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 text-white">
-        <h1 className='flex-1'>
+    <nav className="flex flex-wrap items-center justify-between w-full text-white pl-4 py-4 font-barlow">
+        <h1 className='flex-1 font-extrabold'>
             <NavLink to="/">Catfinder</NavLink>
         </h1>
         <ul className='flex flex-nowrap flex-1 items-center justify-evenly'>

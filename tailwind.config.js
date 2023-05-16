@@ -9,6 +9,10 @@ module.exports = {
                 "darkDesaturatedCyan": "hsl(167, 40%, 24%)",
             },
         },
+        fontFamily: {
+            "fraunces": ["Fraunces", "serif"],
+            "barlow": ["Barlow", "sans-serif"]
+        },
     },
     plugins: [],
 };
