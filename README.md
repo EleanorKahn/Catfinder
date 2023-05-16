@@ -4,10 +4,10 @@
 The overall goal of this project is to build and deploy a site that will enable users to search for adoptable cats in their area, and to provide a bit of info on why adoption is the better option. My technical goals were to improve my design skills through copy work and to gain more experience working with REST APIs and Tailwindcss.
 
 # What I used 
-This project uses the React.js library, Tailwindcss with postcss and autoprefixer, and the PetFinder API. It also uses the Sunnyside design challenge from Frontend Mentor for inspiration (https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). 
+This project uses the React.js library, Tailwindcss with postcss and autoprefixer, and the Petfinder API. It also uses the Sunnyside design challenge from Frontend Mentor for inspiration (https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). 
 
 # Personal note
-I am a huge cat lover, and a fierce advocate for adoption. The petfinder site (https://www.petfinder.com/) is a really incredibly resource that allows people who are looking for animal companions to find animals that need homes. It is a truly unique resource because it allows shelters to provide a ton of data on each animal, so people can find the animal who is right for them. On a more personal note, I found my cat through petfinder, and I could not be more grateful to them allowing me to find her. 
+I am a huge cat lover, and a fierce advocate for adoption. The Petfinder site (https://www.petfinder.com/) is a really incredibly resource that allows people who are looking for animal companions to find animals that need homes. It is a truly unique resource because it allows shelters to provide a ton of data on each animal, so people can find the animal who is right for them. On a more personal note, I found my cat through Petfinder, and I could not be more grateful to them for allowing me to find her. 
 
 # Getting Started with Create React App
 
