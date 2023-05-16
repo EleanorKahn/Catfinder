@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ResultComponent from './ResultComponent';
 
 const SearchComponent = () => {
@@ -8,6 +8,12 @@ const SearchComponent = () => {
     const [furLength, setFurLength] = useState("");
     const [goodWith, setGoodWith] = useState("");
     const [color, setColor] = useState("");
+
+
+
+    // useEffect(() => {
+
+    // }, [submit]);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -54,6 +60,7 @@ const SearchComponent = () => {
                     value={color}
                     onChange={(e) => setColor(e.target.value)}
                 >
+                    <option>Any</option>
                     <option>Black</option>
                     <option>Tuxedo</option>
                     <option>White</option>

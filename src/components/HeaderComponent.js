@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderComponent = () => {
   return (
-    <div>
-        <h1>Catfinder</h1>
-        <ul>
+    <nav className="flex flex-wrap items-center justify-between p-6">
+        <h1 className='text-sky-400'>Catfinder</h1>
+        <ul className='flex flex-wrap items-center justify-around'>
             <li>
                 <NavLink to="/">Home</NavLink>
             </li>
@@ -13,8 +13,8 @@ const HeaderComponent = () => {
                 <NavLink to="/catfinder">Search</NavLink>
             </li>
         </ul>
-    </div>
-  );
+    </nav>
+);
 };
 
 export default HeaderComponent;
