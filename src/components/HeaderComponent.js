@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderComponent = () => {
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6">
+    <nav className="flex flex-wrap items-center justify-between p-6 text-white">
         <h1 className='flex-1'>
             <NavLink to="/">Catfinder</NavLink>
         </h1>

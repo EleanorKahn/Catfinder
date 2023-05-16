@@ -3,8 +3,8 @@ import React from 'react';
 const HomePage = () => {
   return (
     <div>
-        <h2 className="mb-4 text-center">Adopt, don&apos;t shop</h2>
-        <section className="grid grid-cols-2 mb-4">
+        <h2 className="mb-4 text-center text-white">Adopt, Don&apos;t Shop</h2>
+        <section className="grid sm:grid-cols-2 grid-cols-1 mb-4">
             <article className="p-4">
                 <h3 className='mb-2'>Transform your brand</h3>
                 <p className='mr-4'>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
@@ -13,7 +13,7 @@ const HomePage = () => {
             <picture>
                 I will be a picture
             </picture>
-            <picture className="p-4">
+            <picture>
                 I will be a picture
             </picture>
             <article className="p-4">

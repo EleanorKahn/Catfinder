@@ -7,7 +7,7 @@ import "./assets/main.css";
 
 function App() {
   return (
-    <div className="App bg-sky-300">
+    <div className="App bg-sky-300 h-full">
       <HeaderComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
