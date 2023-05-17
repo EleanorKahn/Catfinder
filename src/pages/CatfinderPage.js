@@ -1,12 +1,13 @@
-import SearchComponent from "../components/SearchComponent";
+import { useState } from "react";
+import ProtoSearchComponent from "../components/ProtoSearchComponent";
 
 const CatfinderPage = () => {
-
+    const [zipcode, setZipcode] = useState()
     return (
         <div>
-            <h2 className="text-center">Catfinder Page</h2>
+            <h2 className="text-center mb-5 pt-5 font-bold">Catfinder Page</h2>
             <div>
-                <SearchComponent />
+                <ProtoSearchComponent searchZip={(zipcode) => setZipcode(zipcode)} />
             </div>
         </div>
     );

@@ -5,8 +5,8 @@ const FooterComponent = () => {
   return (
     <div className="bg-green-400 text-darkDesaturatedCyan">
         <h3 className='text-center font-bold text-lg'>Catfinder</h3>
-        <ul className='flex flex-wrap self-center justify-evenly'>
-            <li className=''>
+        <ul className='flex flex-wrap self-center justify-center'>
+            <li className='mr-10'>
                 <NavLink to="/">Home</NavLink>
             </li>
             <li>
