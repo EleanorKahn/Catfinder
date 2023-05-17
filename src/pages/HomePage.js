@@ -8,7 +8,7 @@ import catPink from "../assets/images/cats-796437_1280.jpeg";
 const HomePage = () => {
   return (
     <div>
-        <h2 className="mb-4 text-center text-white font-fraunces text-4xl font-bold">Adopt, Don&apos;t Shop</h2>
+        <h2 className="mb-4 text-center text-white font-fraunces text-5xl font-bold">Adopt, Don&apos;t Shop</h2>
         <section className="grid sm:grid-cols-2 grid-cols-1 mb-4 bg-white">
             <GridtextComponent />
             <img src={catFirst} alt="cat" className='object-cover'/>
