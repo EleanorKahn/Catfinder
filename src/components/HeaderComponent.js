@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderComponent = () => {
   return (
-    <div>
-        <nav className="flex flex-wrap items-center justify-between w-full text-white pl-4 py-4 font-barlow">
+    <div className='bg-[url("../assets/images/cat-2605502_1280(2).png")] h-96 bg-cover bg-center'>
+        <nav className="flex flex-wrap items-center justify-between w-full text-white px-8 pt-4 mb-8 font-barlow">
             <h1 className='flex-1 font-extrabold'>
                 <NavLink to="/">Catfinder</NavLink>
             </h1>
-            <ul className='flex flex-nowrap flex-1 items-center justify-evenly'>
-                <li className="">
+            <ul className='flex flex-nowrap flex-1 items-center justify-end'>
+                <li className="mr-6">
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li className="">
@@ -18,6 +18,7 @@ const HeaderComponent = () => {
                 </li>
             </ul>
         </nav>
+        <h2 className="mb-4 text-center text-white font-fraunces text-5xl font-bold">Adopt, Don&apos;t Shop</h2>
     </div>
     );
 };
