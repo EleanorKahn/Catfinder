@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import catgreen from "../assets/images/cat-2605502.jpg";
+//import catgreen from "../assets/images/cat-2605502.jpeg";
 
 const HeaderComponent = () => {
   return (
-    <div style={{ backgroundImage: catgreen }}>
+    <div>
         <nav className="flex flex-wrap items-center justify-between w-full text-white pl-4 py-4 font-barlow">
             <h1 className='flex-1 font-extrabold'>
                 <NavLink to="/">Catfinder</NavLink>

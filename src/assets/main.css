@@ -490,10 +490,6 @@ video {
   display: grid;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .w-full {
   width: 100%;
 }
@@ -553,10 +549,6 @@ video {
   object-fit: cover;
 }
 
-.object-fill {
-  object-fit: fill;
-}
-
 .p-4 {
   padding: 1rem;
 }
@@ -574,12 +566,26 @@ video {
   text-align: center;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-extrabold {
   font-weight: 800;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .text-white {
