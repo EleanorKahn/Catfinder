@@ -18,7 +18,7 @@ const ProtoSearchComponent = ({ searchZipcode }) => {
                     <div>
                         <label className='form-label' hidden htmlFor='zip'>ZipCode</label>
                         <input 
-                            className='form-text mr-3 py-2 px-3 appearance-none rounded'
+                            className='form-text mr-3 py-2 px-3 appearance-none rounded-sm'
                             id="zip"
                             type="text"
                             name="zip"
@@ -29,7 +29,7 @@ const ProtoSearchComponent = ({ searchZipcode }) => {
                     </div>
                     <button
                         type="submit"
-                        className='flex-shrink-0 text-md text-white bg-teal-400 hover:bg-teal800 rounded py-2 px-3'
+                        className='flex-shrink-0 text-md text-white bg-teal-400 hover:bg-teal800 rounded-sm py-2 px-3 shadow-sm'
                     >
                         Search
                     </button>
