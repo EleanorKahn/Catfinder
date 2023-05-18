@@ -19,33 +19,26 @@ const CatfinderPage = () => {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
         }).then(function (resp) {
-
             // Return the response as JSON
             return resp.json();
-
         }).then(function (data) {
-
             // Log the API data
             console.log('token', data);
-
             // Return a second API call
             // This one uses the token we received for authentication
             return fetch('https://api.petfinder.com/v2/animals?limit=21', {
                 headers: {
-                    'Authorization': `Bearer ${process.env.BEARER}`,
+                    'Authorization': data.token_type + ' ' + data.access_token,
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
             });
-
         }).then(function (resp) {
             return resp.json();
         }).then(function (data) {
             setData(data);
             console.log('pets', data);
-
         }).catch(function (err) {
             console.log('something went wrong', err);
-
         });
     },[go]);
     
