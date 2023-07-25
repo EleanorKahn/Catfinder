@@ -15,7 +15,6 @@ const SearchComponent = () => {
                 const response = await fetch(url);
                 const data = await response.json();
                 setPetData(data.animals);
-                console.log(petData);
                 setIsLoading(false);
             } catch(err) {
                 console.log(err);
@@ -37,9 +36,8 @@ const SearchComponent = () => {
             : petData.length > 0 && submit &&
                 <div>
                     {petData?.map((pet) => {
-                        console.log(pet.name);
                         return (
-                            <CatGridComponent key={pet.id} animal={pet}/>
+                            <CatGridComponent key={pet.id} pet={pet}/>
                         );
                     })
                 }
