@@ -1,12 +1,11 @@
 import React from 'react';
 
-const CatGridComponent = ({ squid }) => {
-    console.log(squid);
+const CatGridComponent = ({ pet }) => {
     return (
         <div>
-            <p>Hi, I am {squid}</p>
+            <p>Hi, I am a cat</p>
         </div>
-    )
-}
+    );
+};
 
 export default CatGridComponent;

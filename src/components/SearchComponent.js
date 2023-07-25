@@ -3,7 +3,7 @@ import CatGridComponent from './CatGridComponent';
 import Loading from './Loading';
 
 const SearchComponent = () => {
-    const [submit, setSubmit] = useState('false');
+    const [submit, setSubmit] = useState(false);
     const [petData, setPetData] = useState([]);
     const [loading, setIsLoading] = useState(false);
 
@@ -11,15 +11,12 @@ const SearchComponent = () => {
         const petfetch = async () => {
             try {
                 setIsLoading(true);
-                console.log('I am loading');
                 const url = '/data/data.json';
                 const response = await fetch(url);
                 const data = await response.json();
                 setPetData(data.animals);
-                console.log(petData[0]);
                 console.log(petData);
                 setIsLoading(false);
-                console.log('I am not loading anymore')
             } catch(err) {
                 console.log(err);
             }
@@ -29,17 +26,27 @@ const SearchComponent = () => {
 
     return (
         <div>
-            {loading
-            ? <Loading />
-            : <button 
+            <button 
                 className='submit' 
                 onClick={() => setSubmit(true)}
             >
                 Find a pet
             </button>
+            {loading
+            ? <Loading />
+            : petData.length > 0 && submit &&
+                <div>
+                    {petData?.map((pet) => {
+                        console.log(pet.name);
+                        return (
+                            <CatGridComponent key={pet.id} animal={pet}/>
+                        );
+                    })
+                }
+            </div>
             }
         </div>
-    )
+    );
 };
 
 export default SearchComponent;
