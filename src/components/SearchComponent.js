@@ -34,7 +34,7 @@ const SearchComponent = () => {
             {loading
             ? <Loading />
             : petData.length > 0 && submit &&
-                <div className='px-4 grid grid-cols-4 gap-5'>
+                <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3'>
                     {petData?.map((pet) => {
                         return (
                             <CatGridComponent key={pet.id} pet={pet}/>
