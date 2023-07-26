@@ -1,9 +1,9 @@
 h1,
 .nav-link {
-    text-shadow: 1px 1px black;
+    text-shadow: .5px .5px .5px black;
 }
 
 .squid {
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 1px 1px 1px black;
 }
 

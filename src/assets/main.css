@@ -510,8 +510,16 @@ video {
   height: 24rem;
 }
 
+.max-h-full {
+  max-height: 100%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .flex-1 {
@@ -566,10 +574,6 @@ video {
   align-self: center;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -591,6 +595,10 @@ video {
 
 .bg-\[url\(\"\.\.\/assets\/images\/cat-2605502_1280\(2\)\.png\"\)\] {
   background-image: url("../assets/images/cat-2605502_1280(2).png");
+}
+
+.bg-auto {
+  background-size: auto;
 }
 
 .bg-contain {
