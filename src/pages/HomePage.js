@@ -8,7 +8,7 @@ import catPink from "../assets/images/image-graphic-design.jpg";
 const HomePage = () => {
   return (
     <div>
-        <section className="grid sm:grid-cols-2 grid-cols-1 mb-4 bg-white">
+        <section className="grid sm:grid-cols-2 grid-cols-1 mb-4 bg-white max-w-fit">
             <GridtextComponent />
             <img src={catFirst} alt="cat" className='object-cover'/>
             <img src={catThird} alt="cat" />
