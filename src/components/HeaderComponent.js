@@ -10,15 +10,15 @@ const HeaderComponent = () => {
                 <NavLink to="/">Catfinder</NavLink>
             </h1>
             <ul className='flex flex-nowrap flex-1 items-center justify-end'>
-                <li className="mr-6">
+                <li className="mr-6 nav-link">
                     <NavLink to="/">Home</NavLink>
                 </li>
-                <li className="">
+                <li className="nav-link">
                     <NavLink to="/catfinder">Search</NavLink>
                 </li>
             </ul>
         </nav>
-        <h2 className="mb-4 text-center text-white font-fraunces text-5xl font-bold">Adopt, Don&apos;t Shop</h2>
+        <h2 className="mb-4 text-center text-white font-fraunces text-5xl font-bold squid">Adopt, Don&apos;t Shop</h2>
     </div>
     );
 };
