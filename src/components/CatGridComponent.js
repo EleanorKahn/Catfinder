@@ -4,11 +4,11 @@ const CatGridComponent = ({ pet }) => {
     return (
         <div className='bg-white overflow-hidden shadow-md rounded-lg mb-3'>
             <div className="">
-                <img className='bg-contain' src={pet.primary_photo_cropped.large} alt={pet.type}/>
+                <img className='bg-contain' src={pet.primary_photo_cropped.small} alt={pet.type}/>
                 <h3>{pet.name}</h3>
                 {pet.tags.map((tag) => <span>{tag}, </span>)}
             </div>
-            <button><a className='fixed-bottom' href={pet.url} target='blank'>View my full profile on Petfinder</a></button>
+            <p>View my <a className='text-blue-400' href={pet.url} target='blank'>full profile</a> on Petfinder</p>
             
         </div>
     );
