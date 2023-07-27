@@ -5,7 +5,7 @@ import Loading from './Loading';
 const SearchComponent = () => {
     const [submit, setSubmit] = useState(false);
     const [petData, setPetData] = useState([]);
-    const [token, setToken] = useState('');
+    const [token, setToken] = useState({});
     const [loading, setIsLoading] = useState(false);
 
     const getToken = async () => {
@@ -34,10 +34,17 @@ const SearchComponent = () => {
         try {
             setIsLoading(true);
 
-            const findPetUrl = '/data/data.json';
-            const response = await fetch(findPetUrl);
+            const findPetUrl = 'https://api.petfinder.com/v2/animals/?limit=20';
+            const response = await fetch(findPetUrl, {
+                headers: {
+                    'Authorization': `${token.token_type} ${token.access_token}`,
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+
+            });
 
             const data = await response.json();
+            console.log(data);
             setPetData(data.animals);
 
             setIsLoading(false);
