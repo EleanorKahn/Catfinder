@@ -20,7 +20,9 @@ const SearchComponent = () => {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
-            })
+            });
+
+            console.log(tokenResponse);
 
             const newToken = await tokenResponse.json();
             setToken(newToken);
@@ -40,7 +42,6 @@ const SearchComponent = () => {
                     'Authorization': `${token.token_type} ${token.access_token}`,
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
-
             });
 
             const data = await response.json();
