@@ -11,6 +11,8 @@ To build and deploy a site that will enable users to search for adoptable cats i
 - postcss-cli 10.1.0
 - autoprefixer 10.4.14
 - petfinder API 
+- cors 2.8.5
+- express 4.18.2
 - Frontend Mentor design inspo
 
 This project uses the React.js library, Tailwindcss with postcss and autoprefixer, and the Petfinder API. It also uses the Sunnyside design challenge from Frontend Mentor for inspiration (https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). 
