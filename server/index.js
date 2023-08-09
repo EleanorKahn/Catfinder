@@ -9,7 +9,7 @@ app.listen(port, () => {
 });
 
 const corsOpt = {
-    origin: 'https://api.petfinder.com/v2/',
+    origin: 'https://api.petfinder.com/',
     optionsSuccessStatus: 200,
 }
 

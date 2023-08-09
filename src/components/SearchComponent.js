@@ -26,6 +26,7 @@ const SearchComponent = () => {
 
             const newToken = await tokenResponse.json();
             setToken(newToken);
+            console.log(token)
             setIsLoading(false);
         } catch(err) {
             console.log(err);
@@ -45,8 +46,9 @@ const SearchComponent = () => {
             });
 
             const data = await response.json();
-            console.log(data);
             setPetData(data.animals);
+            console.log(data.animals);
+            console.log(petData);
 
             setIsLoading(false);
         } catch(err) {
@@ -57,6 +59,8 @@ const SearchComponent = () => {
     useEffect(() => {
         getToken();
         petfetch();
+        console.log(petData);
+        console.log(token);
     }, [submit]);
 
 
@@ -70,7 +74,7 @@ const SearchComponent = () => {
             </button>
             {loading
             ? <Loading />
-            : petData.length > 0 && submit &&
+            : petData.length > 2 && submit && !loading &&
                 <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3'>
                     {petData?.map((pet) => {
                         return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CatGridComponent = ({ pet }) => {
-    const coverPhoto = pet.primary_photo_cropped.full;
+    const coverPhoto = pet.primary_photo_cropped.small;
     return (
         <div className='bg-white shadow-md'>
             <div className="rounded-md">
