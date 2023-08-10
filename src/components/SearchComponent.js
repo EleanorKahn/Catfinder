@@ -46,7 +46,9 @@ const SearchComponent = () => {
             });
 
             const data = await response.json();
-            setPetData(data.animals);
+            const animalData = data.animals;
+            const argh = (animalData) => setPetData(animalData);
+            argh(animalData);
             console.log(data.animals);
             console.log(petData);
 
@@ -72,9 +74,10 @@ const SearchComponent = () => {
             >
                 Find a pet
             </button>
+            {!loading && petData.length === 0 && submit && <h2>No pets found</h2>}
             {loading
             ? <Loading />
-            : petData.length > 2 && submit && !loading &&
+            : (petData.length > 0) && submit &&
                 <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3'>
                     {petData?.map((pet) => {
                         return (
