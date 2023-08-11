@@ -3,7 +3,19 @@ h1,
     text-shadow: .5px .5px .5px black;
 }
 
-.squid {
+.cat-header {
     text-shadow: 1px 1px 1px black;
 }
+
+
+@media screen and (max-width: 450px) {
+    .search-component .results-grid {
+        display: block;
+    }
+
+    .cat-card {
+        margin-block-end: 1rem;
+    }
+}
+
 

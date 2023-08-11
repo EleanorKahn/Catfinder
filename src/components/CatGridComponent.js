@@ -1,9 +1,9 @@
 import React from 'react';
 
 const CatGridComponent = ({ pet }) => {
-    const coverPhoto = pet.primary_photo_cropped.small;
+    const coverPhoto = !pet.primary_photo_cropped.small ? 'https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/65580616/4/?bust=1690232655&width=300' : pet.primary_photo_cropped.small;
     return (
-        <div className='bg-white shadow-md'>
+        <div className='bg-white shadow-md cat-card'>
             <div className="rounded-md">
                 <div className='bg-cover bg-center min-w-full min-h-full' style={{backgroundImage: `url(${coverPhoto})`, height: '250px', width: '175px' }} aria-describedby={pet.name}>
                 </div>

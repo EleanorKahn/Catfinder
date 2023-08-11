@@ -18,7 +18,7 @@ const HeaderComponent = () => {
                 </li>
             </ul>
         </nav>
-        <h2 className="mb-4 text-center text-white font-fraunces text-5xl font-bold squid">Adopt, Don&apos;t Shop</h2>
+        <h2 className="mb-4 text-center text-white font-fraunces text-5xl font-bold cat-header">Adopt, Don&apos;t Shop</h2>
     </div>
     );
 };

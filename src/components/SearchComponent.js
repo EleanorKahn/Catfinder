@@ -58,7 +58,7 @@ const SearchComponent = () => {
 
 
     return (
-        <div>
+        <div className='search-component'>
             <button 
                 className='submit' 
                 onClick={() => setSubmit(true)}
@@ -69,7 +69,7 @@ const SearchComponent = () => {
             {loading
             ? <Loading />
             : (petData.length > 0) && submit &&
-                <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3'>
+                <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3 results-grid'>
                     {console.log(petData)}
                     {petData?.map((pet) => {
                         return (
