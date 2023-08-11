@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CatGridComponent from './CatGridComponent';
 import Loading from './Loading';
+//import Form from './Form';
 
 const SearchComponent = () => {
     const [submit, setSubmit] = useState(false);
@@ -65,6 +66,7 @@ const SearchComponent = () => {
             >
                 Find a pet
             </button>
+            <Form />
             {!loading && petData.length === 0 && submit && <h2>No pets found</h2>}
             {loading
             ? <Loading />
