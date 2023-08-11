@@ -22,11 +22,8 @@ const SearchComponent = () => {
                 }
             });
 
-            // console.log(tokenResponse);
-
             const newToken = await tokenResponse.json();
             setToken(newToken);
-            // console.log(token)
             setIsLoading(false);
         } catch(err) {
             console.log(err);
@@ -37,7 +34,7 @@ const SearchComponent = () => {
         try {
             setIsLoading(true);
 
-            const findPetUrl = 'https://api.petfinder.com/v2/animals/?limit=20&status=adoptable&primary_photo_cropped=true';
+            const findPetUrl = 'https://api.petfinder.com/v2/animals/?limit=20&status=adoptable&type=Cat&primary_photo_cropped=true';
             const response = await fetch(findPetUrl, {
                 headers: {
                     'Authorization': `${token.token_type} ${token.access_token}`,
@@ -46,10 +43,7 @@ const SearchComponent = () => {
             });
 
             const data = await response.json();
-            const animalData = data.animals;
-            setPetData(animalData);
-            // console.log(data.animals);
-            // console.log(petData);
+            setPetData(data.animals);
 
             setIsLoading(false);
         } catch(err) {
@@ -77,7 +71,6 @@ const SearchComponent = () => {
             : (petData.length > 0) && submit &&
                 <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3'>
                     {console.log(petData)}
-                    {console.log(token)}
                     {petData?.map((pet) => {
                         return (
                             <CatGridComponent key={pet.id} pet={pet}/>
