@@ -37,7 +37,7 @@ const SearchComponent = () => {
         try {
             setIsLoading(true);
 
-            const findPetUrl = 'https://api.petfinder.com/v2/animals/?limit=10';
+            const findPetUrl = 'https://api.petfinder.com/v2/animals/?limit=20&status=adoptable&primary_photo_cropped=true';
             const response = await fetch(findPetUrl, {
                 headers: {
                     'Authorization': `${token.token_type} ${token.access_token}`,
