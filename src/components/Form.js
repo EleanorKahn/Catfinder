@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Form = ({ zipcode }) => {
-    const [zip, setZip] = useState();
 
     function handleSubmit(e) {
         e.preventDefault();
