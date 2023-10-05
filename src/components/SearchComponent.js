@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import CatGridComponent from './CatGridComponent';
 import Loading from './Loading';
-//import Form from './Form';
+import CatForm from './CatForm';
 
 const SearchComponent = () => {
     const [submit, setSubmit] = useState(false);
     const [petData, setPetData] = useState([]);
     const [token, setToken] = useState({});
     const [loading, setIsLoading] = useState(false);
+    const [zipcode, setZipcode] = useState();
 
     const getToken = async () => {
         try {
@@ -59,28 +60,31 @@ const SearchComponent = () => {
 
 
     return (
-        <div className='search-component'>
-            <button 
-                className='submit' 
-                onClick={() => setSubmit(true)}
-            >
-                Find a pet
-            </button>
-            <Form />
-            {!loading && petData.length === 0 && submit && <h2>No pets found</h2>}
-            {loading
-            ? <Loading />
-            : (petData.length > 0) && submit &&
-                <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3 results-grid'>
-                    {console.log(petData)}
-                    {petData?.map((pet) => {
-                        return (
-                            <CatGridComponent key={pet.id} pet={pet}/>
-                        );
-                    })
+        <div>
+            <CatForm zipcode={zipcode} setZipcode={setZipcode} />
+            <div className='search-component'>
+                <button 
+                    className='submit' 
+                    onClick={() => setSubmit(true)}
+                >
+                    Find a pet
+                </button>
+                <CatForm />
+                {!loading && petData.length === 0 && submit && <h2>No pets found</h2>}
+                {loading
+                ? <Loading />
+                : (petData.length > 0) && submit &&
+                    <div className='px-4 grid lg:grid-cols-4 md:grid-cols-3 md:gap-5 grid-cols-2 gap-3 results-grid'>
+                        {console.log(petData)}
+                        {petData?.map((pet) => {
+                            return (
+                                <CatGridComponent key={pet.id} pet={pet}/>
+                            );
+                        })
+                    }
+                </div>
                 }
             </div>
-            }
         </div>
     );
 };

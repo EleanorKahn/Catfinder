@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Form = ({ zipcode }) => {
+const CatForm = ({ zipcode, setZipcode }) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        zipcode(e.target.value);
+        setZipcode(e.target.value);
+        console.log(zipcode);
     }
 
     return (
@@ -14,10 +15,10 @@ const Form = ({ zipcode }) => {
                     Zipcode 
                 </label>
                 <input type='text' placeholder='12345'/>
-                <button type='submit' onClick={handleSubmit(e)}>Submit</button>
+                <button type='submit' onClick={(e) => handleSubmit(e)}>Submit</button>
             </form>
         </div>
     );
 };
 
-export default Form;
+export default CatForm;
