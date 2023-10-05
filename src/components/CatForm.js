@@ -4,8 +4,9 @@ const CatForm = ({ zipcode, setZipcode }) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        setZipcode(e.target.value);
-        console.log(zipcode);
+        zipcode = e.target.value;
+        console.log();
+
     }
 
     return (

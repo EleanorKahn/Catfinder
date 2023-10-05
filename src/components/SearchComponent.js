@@ -61,7 +61,7 @@ const SearchComponent = () => {
 
     return (
         <div>
-            <CatForm zipcode={zipcode} setZipcode={setZipcode} />
+            <CatForm zipcode={zipcode} />
             <div className='search-component'>
                 <button 
                     className='submit' 
